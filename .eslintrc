@@ -1,0 +1,25 @@
+{
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 12,
+        "allowImportExportEverywhere": false,
+        "ecmaFeatures": {
+            "globalReturn": false
+        },
+        "babelOptions": {
+            "configFile": "babel.config.json"
+        }
+    },
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true,
+        "jquery": true
+    },
+    "extends": "eslint:recommended"
+    // 0 - turn rule off
+    // 1 - rule generates warnings
+    // 2 - rule generates errors
+    
+}

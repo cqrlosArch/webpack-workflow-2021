@@ -1,0 +1,7 @@
+@use '../abstracts/mixins.scss' as mx;
+
+@include mx.fontface('Montserrat-Regular', 'Montserrat-Regular');
+@include mx.fontface('Montserrat-Bold', 'Montserrat-Bold');
+
+$montserrat-regular: 'Montserrat-Regular', sans-serif;
+$montserrat-bold: 'Montserrat-Bold', sans-serif;
