@@ -108,9 +108,6 @@ module.exports = {
       },
     ],
   },
-  devServer: {
-    contentBase: path.resolve(__dirname, '..', './dist'),
-  },
   optimization: {
     nodeEnv: 'production',
     runtimeChunk: 'single',
