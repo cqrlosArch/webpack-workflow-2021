@@ -1,5 +1,5 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 // const { ESBuildPlugin } = require('esbuild-loader')
@@ -12,12 +12,7 @@ const PAGES = fs
   .filter((fileName) => fileName.endsWith('.pug'));
 
 module.exports = {
-  entry: path.resolve(__dirname, '..', './src/index.js'),
-  output: {
-    path: path.resolve(__dirname, '..', './dist'),
-    filename: 'js/[name].[contenthash].js',
-    clean: true,
-  },
+  entry: path.resolve(__dirname, '../src/index.js'),
   module: {
     rules: [
       {
@@ -126,11 +121,11 @@ module.exports = {
     extensions: ['*', '.js', '.css', '.scss', '.pug', '.jsx'],
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "./src/views/index.pug",
+      template: './src/views/index.pug',
+      title: 'My site',
     }),
-    ...PAGES.map(
+    ...PAGES?.map(
       (page) =>
         new HtmlWebpackPlugin({
           template: `${PAGES_DIR}/${page}`,
@@ -138,8 +133,9 @@ module.exports = {
           // inject: false,
         })
     ),
+    new HtmlWebpackPugPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'css/styles.css',
+      filename: 'css/styles.min.css',
     }),
     new ESLintPlugin(),
   ],

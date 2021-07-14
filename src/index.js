@@ -13,6 +13,8 @@ import './vendors/jquery-3.5.1.min.js';
 //Modules
 import getData from './common/module';
 
+
+
 // eslint-disable-next-line no-undef
 if (process.env.NODE_ENV !== 'production') {
   console.log('Looks like we are in development mode!');

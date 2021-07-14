@@ -7,17 +7,7 @@ block metaTags
     include includes/meta_tags
     include includes/favicons
 
-block styles
-    <!-- build:css -->
-    link(rel="stylesheet" href='./css/styles.css')
-    <!-- endbuild -->
-
 block main
     include layout/header
     include layout/main_content
     include layout/footer
-
-block scripts
-    <!-- build:js -->
-    script(src='js/bundle.js' defer)
-    <!-- endbuild -->
