@@ -1,14 +1,21 @@
 {
   "name": "webpack_config_2021",
   "version": "1.0.0",
-  "description": "Webpack Workflow",
+  "description": "Webpack Workflow 2021 Babel, Sass & Pug",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --config  webpack/webpack.config.js --env env=dev",
     "start": "webpack serve --config  webpack/webpack.config.js --open --env env=dev",
     "build": "webpack --config webpack/webpack.config.js --env env=prod"
   },
-  "keywords": [],
+  "keywords": [
+    "webpack",
+    "workflow"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cqrlosArch/webpack-workflow-2021"
+  },
   "author": "Carlos Diaz",
   "license": "ISC",
   "devDependencies": {
@@ -16,7 +23,6 @@
     "@babel/preset-env": "^7.12.11",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
-    "clean-webpack-plugin": "^3.0.0",
     "core-js": "^3.15.2",
     "css-loader": "^5.0.1",
     "eslint": "^7.17.0",
