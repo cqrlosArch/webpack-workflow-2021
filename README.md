@@ -1,5 +1,10 @@
 # Webpack Workflow 2021
 
+
+<p align="center">
+  <img src="screenshot.png">
+</p>
+
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
